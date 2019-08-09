@@ -1,0 +1,15 @@
+Package: Numberphile
+Title: A Package Inspired by Numberphile Videos
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Sebastian",
+           family = "Henz",
+           role = c("aut", "cre"),
+           email = "bastihz.dev@posteo.de")
+Description: Functions to recreate some neat sequences and
+    diagrams seen in Numberphile videos on youtube.
+License: MIT + file LICENSE
+Suggests: 
+    testthat
+Encoding: UTF-8
+LazyData: true
