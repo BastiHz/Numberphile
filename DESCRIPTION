@@ -10,6 +10,7 @@ Description: Functions to recreate some neat sequences and
     diagrams seen in Numberphile videos on youtube.
 License: MIT + file LICENSE
 Suggests: 
-    testthat
+    testthat (>= 2.1.0)
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.1.1
