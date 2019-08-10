@@ -1,0 +1,2 @@
+#' @import utils
+"_PACKAGE"
