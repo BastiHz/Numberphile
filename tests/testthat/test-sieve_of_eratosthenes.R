@@ -5,3 +5,11 @@ test_that("the result is correct", {
            67, 71, 73, 79, 83, 89, 97)
     expect_identical(sieve_of_eratosthenes(100), as.integer(p))
 })
+
+
+test_that("p_max < 6", {
+    expect_identical(sieve_of_eratosthenes(2), 2L)
+    expect_identical(sieve_of_eratosthenes(3), c(2L, 3L))
+    expect_identical(sieve_of_eratosthenes(4), c(2L, 3L))
+    expect_identical(sieve_of_eratosthenes(5), c(2L, 3L, 5L))
+})

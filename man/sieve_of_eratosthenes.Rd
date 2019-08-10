@@ -4,10 +4,10 @@
 \alias{sieve_of_eratosthenes}
 \title{Sieve of Eratosthenes}
 \usage{
-sieve_of_eratosthenes(n)
+sieve_of_eratosthenes(p_max)
 }
 \arguments{
-\item{n}{The upper limit of the region}
+\item{p_max}{The upper limit of the region that is searched for primes.}
 }
 \value{
 A vector of the primes between 2 and n.
