@@ -22,19 +22,16 @@
 #'
 #' @export
 prime_parallelograms <- function(p_max, plot = TRUE) {
-    bin_rev_dec_sub <- function(x) {
-        y <- intToBits(x)
-        y <- as.integer(y)
-        y <- y[1:tail(which(y == 1), 1)]
-        y <- paste(y, collapse = "")
-        y <- strtoi(y, 2)
-        x - y
-    }
     p <- sieve_of_eratosthenes(p_max)
-    y <- vapply(p, bin_rev_dec_sub, FUN.VALUE = 1L)
-    i <- seq_along(p)  # In the video the indices of the primes are on the x axis
-
+    y <- lapply(p, intToBits)  # The output of intToBits() is already reversed.
+    y <- lapply(y, as.integer)
+    y <- lapply(y, paste, collapse = "")
+    y <- sub("[0]+$", "", y)
+    y <- p - strtoi(y, 2)
+    i <- seq_along(p)
     if (plot) {
+        # In the video and on OEIS the indices of the primes are on the x axis,
+        # not the primes themselves.
         plot(i, y, pch = 20, cex = 0.3, las = 1)
     }
     out <- data.frame(
