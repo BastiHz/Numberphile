@@ -1,2 +1,2 @@
-# Numberphile
-Inspired by Numberphile videos
+# numberphile
+An R package inspired by Numberphile videos.

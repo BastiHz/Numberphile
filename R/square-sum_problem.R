@@ -1,4 +1,4 @@
-# # Exploring an mathematical problem seen in this Numberphile video:
+# # Exploring a mathematical problem seen in this Numberphile video:
 # # The Square-Sum Problem https://www.youtube.com/watch?v=G1m7goLCJDY
 #
 #
