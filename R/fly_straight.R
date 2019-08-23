@@ -1,6 +1,6 @@
 # # first half of this video: https://www.youtube.com/watch?v=pAMgUB51XZA
 #
-# get_gcd <- function(a, b) ifelse (b==0, a, get_gcd(b, a %% b))
+# get_gcd <- function(a, b) if (b==0) a else get_gcd(b, a %% b)
 #
 # n_max <- 1000
 # a <- c(1, 1, rep(NA, n_max-2))
