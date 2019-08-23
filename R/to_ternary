@@ -1,0 +1,23 @@
+# 3^3 3^2 3^1 3^0
+#  27   9   3   1
+
+
+# Just playing around without looking up the best method.
+# TODO: Improve this function.
+to_ternary <- function(n) {
+    x <- log(n, 3)
+    len <- ceiling(x)
+    result = integer(len)
+    pow <- len - 1
+    for (i in seq_len(len)) {
+        three_pow <- 3^pow
+        k <- n %/% three_pow
+        result[i] <- k
+        n <- n - three_pow * k
+        pow <- pow - 1
+    }
+    paste(result, collapse = "")
+}
+
+to_ternary(25) == "221"
+to_ternary(87) == "10020"
