@@ -14,12 +14,9 @@ Sequence of positive integers where each is chosen to be as small as possible
 subject to the condition that no three terms a(j), a(j+k), a(j+2k) (for any j
 and k) form an arithmetic progression.
 }
-\note{
-This implementation is quite slow. Be cautious with n > 10000.
-}
 \examples{
-ff <- forest_fire(2000)
-plot(ff)
+ff <- forest_fire(5000)
+plot(ff, pch = 16, col = "#00000070")
 
 }
 \references{
