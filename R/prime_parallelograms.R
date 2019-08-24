@@ -17,7 +17,7 @@
 #'
 #' @examples
 #' pp <- prime_parallelograms(10000)
-#' plot(pp$i, pp$y, pch = 20, cex = 0.3, las = 1)
+#' plot(pp$i, pp$y, pch = 20, cex = 0.3)
 #'
 #' @export
 prime_parallelograms <- function(p_max, plot = FALSE) {

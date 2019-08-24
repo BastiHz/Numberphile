@@ -15,7 +15,7 @@ decimal.
 }
 \examples{
 bt <- balanced_ternary(200)
-plot(bt$n, bt$y, pch = 16)
+plot(bt$n, bt$y)
 
 }
 \references{
