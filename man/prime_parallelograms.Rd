@@ -29,6 +29,5 @@ This sequence in the On-Line Encyclopedia of Integer Sequences:
   \href{https://oeis.org/A265326}{A265326}.
 
   The Numberphile video featuring Neil Sloane and Brady Haran.
-  \href{https://www.youtube.com/watch?v=pAMgUB51XZA&feature=youtu.be&t=467}{Amazing
-   Graphs} (skip to 7:47).
+  \href{https://youtu.be/pAMgUB51XZA?t=467}{Amazing Graphs} (skip to 7:47).
 }

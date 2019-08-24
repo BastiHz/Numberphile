@@ -13,8 +13,7 @@
 #'   \href{https://oeis.org/A265326}{A265326}.
 #'
 #'   The Numberphile video featuring Neil Sloane and Brady Haran.
-#'   \href{https://www.youtube.com/watch?v=pAMgUB51XZA&feature=youtu.be&t=467}{Amazing
-#'    Graphs} (skip to 7:47).
+#'   \href{https://youtu.be/pAMgUB51XZA?t=467}{Amazing Graphs} (skip to 7:47).
 #'
 #' @examples
 #' pp <- prime_parallelograms(10000)
@@ -34,10 +33,5 @@ prime_parallelograms <- function(p_max, plot = FALSE) {
         # not the primes themselves.
         plot(i, y, pch = 20, cex = 0.3, las = 1)
     }
-    out <- data.frame(
-        primes = p,
-        y = y,
-        i = i
-    )
-    out
+    data.frame(primes = p, y = y, i = i)
 }
