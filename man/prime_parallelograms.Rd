@@ -4,7 +4,7 @@
 \alias{prime_parallelograms}
 \title{Prime Parallelograms}
 \usage{
-prime_parallelograms(p_max, plot = TRUE)
+prime_parallelograms(p_max, plot = FALSE)
 }
 \arguments{
 \item{p_max}{The upper limit of the region that is searched for primes.}
@@ -12,23 +12,23 @@ prime_parallelograms(p_max, plot = TRUE)
 \item{plot}{Logical. Should the parallelograms be plotted?}
 }
 \value{
-Invisibly returns a data frame with columns for the primes, the
-  result of the binary reversal and substraction, and the indices of the
-  primes.
+A data frame with columns for the primes, the result of the binary
+  reversal and substraction, and the indices of the primes.
 }
 \description{
-Take a prime number, convert it to binary, reverse it, convert it
-back to decimal, and then substract it from the original prime number.
+Take a prime number, convert it to binary, reverse it, convert it back to
+decimal, and then substract it from the original prime number.
 }
 \examples{
-prime_parallelograms(10000)
+pp <- prime_parallelograms(10000)
+plot(pp$i, pp$y, pch = 20, cex = 0.3, las = 1)
 
 }
 \references{
 This sequence in the On-Line Encyclopedia of Integer Sequences:
-\href{https://oeis.org/A265326}{A265326}.
+  \href{https://oeis.org/A265326}{A265326}.
 
-The Numberphile video featuring Neil Sloane and Brady Haran.
-\href{https://www.youtube.com/watch?v=pAMgUB51XZA&feature=youtu.be&t=467}{Amazing
-Graphs}. Skip to 7:47 if the video plays from the beginning.
+  The Numberphile video featuring Neil Sloane and Brady Haran.
+  \href{https://www.youtube.com/watch?v=pAMgUB51XZA&feature=youtu.be&t=467}{Amazing
+   Graphs} (skip to 7:47).
 }
