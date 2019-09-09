@@ -2,6 +2,7 @@
 
 export(balanced_ternary)
 export(forest_fire)
+export(get_gcd)
 export(prime_parallelograms)
 export(sieve_of_eratosthenes)
 import(utils)
