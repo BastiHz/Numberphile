@@ -1,17 +1,30 @@
-# # first half of this video: https://www.youtube.com/watch?v=pAMgUB51XZA
-#
-# get_gcd <- function(a, b) if (b==0) a else get_gcd(b, a %% b)
-#
-# n_max <- 1000
-# a <- c(1, 1, rep(NA, n_max-2))
-# for (n in 2:n_max) {
-#     gcd <- get_gcd(n, a[n-1])
-#     if (gcd == 1) {
-#         a[n] <- a[n-1] + n + 1
-#     } else {
-#         a[n] <- a[n-1] / gcd
-#     }
-# }
-# n <- 0:n_max
-# a <- c(1, a)
-# plot(n, a, pch = 20, las = 1)
+#' Fly Straight
+#'
+#' TODO: write a nice description
+#'
+#' @param n The number of terms of the sequence to generate.
+#'
+#' @examples
+#' fs <- fly_straight(1000)
+#' plot(fs)
+#'
+#' @references This sequence in the On-Line Encyclopedia of Integer Sequences:
+#'   \href{https://oeis.org/A133058}{A133058}.
+#'
+#'   The Numberphile video featuring Neil Sloane and Brady Haran.
+#'   \href{https://www.youtube.com/watch?v=pAMgUB51XZA}{Amazing Graphs}.
+#'
+#' @export
+fly_straight <- function(n) {
+    stopifnot(n > 1)
+    a <- c(1, 1, rep(NA, n-2))
+    for (i in 2:n) {
+        gcd <- get_gcd(i, a[i-1])
+        if (gcd == 1) {
+            a[i] <- a[i-1] + i + 1
+        } else {
+            a[i] <- a[i-1] / gcd
+        }
+    }
+    data.frame(x = 0:n, y = c(1, a))
+}
