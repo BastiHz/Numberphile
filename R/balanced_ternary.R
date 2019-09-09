@@ -14,7 +14,7 @@
 #'
 #' @examples
 #' bt <- balanced_ternary(200)
-#' plot(bt$n, bt$y)
+#' plot(bt)
 #'
 #' @export
 balanced_ternary <- function(n) {
@@ -37,5 +37,5 @@ balanced_ternary <- function(n) {
         }
         bt[i] <- balanced
     }
-    data.frame(n = c(0, seq_len(n)), y = c(0, bt))
+    data.frame(x = c(0, seq_len(n)), y = c(0, bt))
 }
