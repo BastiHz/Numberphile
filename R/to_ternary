@@ -11,5 +11,5 @@ to_ternary <- function(n) {
     paste(result, collapse = "")
 }
 
-to_ternary(25) == "221"
-to_ternary(87) == "10020"
+# to_ternary(25) == "221"
+# to_ternary(87) == "10020"
