@@ -12,7 +12,7 @@
 #' @references This sequence in the On-Line Encyclopedia of Integer Sequences:
 #'   \href{https://oeis.org/A265326}{A265326}.
 #'
-#'   The Numberphile video featuring Neil Sloane and Brady Haran.
+#'   The Numberphile video featuring Neil Sloane and Brady Haran:
 #'   \href{https://youtu.be/pAMgUB51XZA?t=467}{Amazing Graphs} (skip to 7:47).
 #'
 #' @examples
