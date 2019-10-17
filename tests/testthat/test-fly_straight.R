@@ -7,7 +7,7 @@ test_that("the sequence generates correctly", {
     fs <- rbind(head(fs, 3), tail(fs, 3))
     rownames(fs) <- NULL
     control <- data.frame(
-        x = c(0, 1, 2, 66,67, 68),
+        x = c(0, 1, 2, 66, 67, 68),
         y = c(1, 1, 4, 266, 334, 167)
     )
     expect_equal(fs, control)
