@@ -8,7 +8,7 @@ test_that("the sequence generates correctly", {
 })
 
 
-test_that("p_max < 6 works", {
+test_that("n < 6 works", {
     expect_identical(sieve_of_eratosthenes(2), 2L)
     expect_identical(sieve_of_eratosthenes(3), c(2L, 3L))
     expect_identical(sieve_of_eratosthenes(4), c(2L, 3L))

@@ -2,7 +2,7 @@
 #'
 #' Get all prime numbers between 2 and n.
 #'
-#' @param p_max The upper limit of the region that is searched for primes.
+#' @param n The upper limit of the region that is searched for primes.
 #'
 #' @return A vector of the primes between 2 and n.
 #'
@@ -10,13 +10,13 @@
 #' sieve_of_eratosthenes(100)
 #'
 #' @export
-sieve_of_eratosthenes <- function(p_max) {
+sieve_of_eratosthenes <- function(n) {
     stopifnot(
-        is.numeric(p_max),
-        p_max > 1
+        is.numeric(n),
+        n > 1
     )
-    if (p_max < 6) {
-        primes <- switch (p_max,
+    if (n < 6) {
+        primes <- switch (n,
             NULL,
             2,
             c(2, 3),
@@ -25,11 +25,11 @@ sieve_of_eratosthenes <- function(p_max) {
         )
         return(as.integer(primes))
     }
-    primes <- rep(TRUE, p_max)
+    primes <- rep(TRUE, n)
     primes[1] <- FALSE  # 1 is not prime
-    for (i in 2:ceiling(sqrt(p_max))) {
+    for (i in 2:ceiling(sqrt(n))) {
         if (primes[i]) {
-            primes[seq(i + i, p_max, i)] <- FALSE
+            primes[seq(i + i, n, i)] <- FALSE
         }
     }
     which(primes)

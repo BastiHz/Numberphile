@@ -20,8 +20,8 @@
 #' plot(pp$i, pp$y, pch = 20, cex = 0.3)
 #'
 #' @export
-prime_parallelograms <- function(p_max, plot = FALSE) {
-    p <- sieve_of_eratosthenes(p_max)
+prime_parallelograms <- function(n, plot = FALSE) {
+    p <- sieve_of_eratosthenes(n)
     y <- lapply(p, intToBits)  # The output of intToBits() is already reversed.
     y <- lapply(y, as.integer)
     y <- lapply(y, paste, collapse = "")

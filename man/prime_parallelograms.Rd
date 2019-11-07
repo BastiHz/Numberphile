@@ -4,10 +4,10 @@
 \alias{prime_parallelograms}
 \title{Prime Parallelograms}
 \usage{
-prime_parallelograms(p_max, plot = FALSE)
+prime_parallelograms(n, plot = FALSE)
 }
 \arguments{
-\item{p_max}{The upper limit of the region that is searched for primes.}
+\item{n}{The upper limit of the region that is searched for primes.}
 
 \item{plot}{Logical. Should the parallelograms be plotted?}
 }
