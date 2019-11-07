@@ -1,14 +1,29 @@
-# # https://www.youtube.com/watch?v=RxxDD2LWAyY
-# # https://en.wikipedia.org/wiki/Lucky_number
-#
-# # Get all lucky numbers <= n
-# n <- 1000
-# lucky_numbers <- seq(1, n, 2)
-# for (i in 2:n) {
-#     step <- lucky_numbers[i]
-#     if (step > length(lucky_numbers)) break
-#     lucky_numbers <- lucky_numbers[-seq(step, n, step)]
-# }
-#
-# lucky_numbers
-# plot(seq_along(lucky_numbers), lucky_numbers)
+#' Lucky Number Sieve
+#'
+#' Get all lucky numbers <= n.
+#'
+#' @param n The upper limit of the region that is searched for lucky numbers.
+#'
+#' @return A vector of the lucky numbers between 1 and n.
+#'
+#' @references This sequence in the On-Line Encyclopedia of Integer Sequences:
+#'   \href{https://oeis.org/A000959}{A000959}.
+#'
+#'   The Numberphile video featuring Ria Symonds and Brady Haran:
+#'   \href{https://youtu.be/RxxDD2LWAyY}{What is a lucky number?}.
+#'
+#' @examples
+#' lucky_number_sieve(100)
+#'
+#' @export
+lucky_number_sieve <- function(n) {
+    lucky_numbers <- seq(1, n, 2)
+    for (i in 2:n) {
+        step <- lucky_numbers[i]
+        if (step > length(lucky_numbers)) {
+            break
+        }
+        lucky_numbers <- lucky_numbers[-seq(step, n, step)]
+    }
+    lucky_numbers
+}
