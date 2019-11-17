@@ -80,8 +80,7 @@ square_sum_problem <- function(n) {
             }
         }
 
-        if (success) break
+        if (success) return(current_chain)
     }
-    if (!success) stop("No valid chains found.")
-    current_chain
+    stop("No valid chains found.")
 }
