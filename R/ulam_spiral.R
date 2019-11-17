@@ -1,46 +1,57 @@
-# # https://www.youtube.com/watch?v=iFuR97YcSLM
-#
-# # https://en.wikipedia.org/wiki/Ulam_spiral
-#
-#
-# library(grid)
-#
-#
-# sidelength <- 1001  # must be > 1 and odd
-# n <- sidelength^2
-# print(n)
-# m <- matrix(NA, nrow = sidelength, ncol = sidelength)
-#
-# x <- y <- integer(n)
-# x[1] <- y[1] <- (sidelength + 1) / 2
-# x_diff <- y_diff <- integer(n)
-# s <- 1
-# k <- 2
-# for (i in seq_len(sidelength - 1)) {
-#     to <- k + i * 2 - 1
-#     x_diff[k:to] <- rep(c(1, 0) * s, each = i)
-#     y_diff[k:to] <- rep(c(0, -1) * s, each = i)
-#     k <- to + 1
-#     s <- s * -1
-# }
-# x_diff[k:n] <- 1
-# y_diff[k:n] <- 0
-# for (i in 2:n) {
-#     x[i] <- x[i-1] + x_diff[i]
-#     y[i] <- y[i-1] + y_diff[i]
-# }
-# m[cbind(y, x)] <- 1:n
-#
-# # sieve of eratosthenes
-# primes <- rep(TRUE, n)
-# primes[1] <- FALSE
-# for (i in 2:sidelength) {
-#     if (primes[i]) {
-#         primes[seq(i + i, n, i)] <- FALSE
-#     }
-# }
-# primes <- seq_len(n)[primes]
-# m <- matrix(m %in% primes, nrow = sidelength)
-#
-# grid.newpage()
-# grid.raster(!m, interpolate = FALSE)
+#' Forest Fire
+#'
+#' Write the numbers from 1 to n in a square spiral and mark all primes.
+#'
+#' @param sidelength The side length of the spiral.
+#'
+#' @references The Numberphile video featuring James Grime and Brady Haran:
+#'   \href{https://youtu.be/iFuR97YcSLM}{Prime Spirals}.
+#'
+#' @examples
+#' us <- ulam_spiral(100)
+#' grid::grid.raster(!us, interpolate = FALSE)
+#'
+#' @export
+ulam_spiral <- function(sidelength) {
+    stopifnot(sidelength > 1)
+    n <- sidelength^2
+
+    get_spiral_coordinates <- function(vec, a, b, j) {
+        direction <- -1
+        r <- 0
+        while (length(vec) <= n) {
+            a <- a + direction
+            new <- b:a
+            i <- j
+            j <- i + length(new)
+            vec[(i+1):j] <- new
+
+            r <- r + 1
+            new <- rep(a, r)
+            i <- j
+            j <- i + length(new)
+            vec[(i+1):j] <- new
+
+            temp <- a
+            a <- b
+            b <- temp
+            direction <- direction * -1
+        }
+        vec <- vec[1:n]
+    }
+
+    x <- numeric(n)
+    k <- floor((sidelength + 1) / 2)
+    x[1:2] <- k:(k+1)
+    x <- get_spiral_coordinates(x, k, k + 1, 2)
+
+    y <- numeric(n)
+    k <- ceiling((sidelength + 1) / 2)
+    y[1] <- k
+    y <- get_spiral_coordinates(y, k, k, 1)
+
+    m <- matrix(0, nrow = sidelength, ncol = sidelength)
+    m[cbind(y, x)] <- 1:n
+    primes <- sieve_of_eratosthenes(n)
+    matrix(m %in% primes, nrow = sidelength)
+}
