@@ -4,15 +4,15 @@
 \alias{chaos_polygon}
 \title{Chaos Polygon}
 \usage{
-chaos_polygon(n_vertices = 3, proportion = 0.5, n_iterations = 10000)
+chaos_polygon(vertices = 3, proportion = 0.5, iterations = 10000)
 }
 \arguments{
-\item{n_vertices}{The number of vertices.}
+\item{vertices}{The number of vertices.}
 
 \item{proportion}{The proportion of the distance to move from the point to
 the target vertex.}
 
-\item{n_iterations}{The number of iterations.}
+\item{iterations}{The number of iterations.}
 }
 \description{
 Start with the vertices of a regular polygon. Randomly place a tracepoint at
