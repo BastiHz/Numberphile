@@ -6,7 +6,7 @@ Authors@R:
            family = "Henz",
            role = c("aut", "cre"),
            email = "bastihz.dev@posteo.de")
-Description: Functions to recreate some neat sequences and
+Description: Functions to create some neat sequences and
     diagrams seen in Numberphile videos on youtube.
 License: MIT + file LICENSE
 Imports: 

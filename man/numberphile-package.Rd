@@ -6,7 +6,7 @@
 \alias{numberphile-package}
 \title{numberphile: A Package Inspired by Numberphile Videos}
 \description{
-Functions to recreate some neat sequences and
+Functions to create some neat sequences and
     diagrams seen in Numberphile videos on youtube.
 }
 \author{
