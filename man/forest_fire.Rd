@@ -23,7 +23,7 @@ plot(ff, pch = 16, col = "#00000070")
 This sequence in the On-Line Encyclopedia of Integer Sequences:
   \href{https://oeis.org/A229037}{A229037}.
 
-  The Numberphile video featuring Neil Sloane and Brady Haran.
+  The Numberphile video featuring Neil Sloane and Brady Haran:
   \href{https://youtu.be/o8c4uYnnNnc?t=217}{Amazing Graphs II
   (including Star Wars)} (skip to 3:37).
 }

@@ -8,7 +8,7 @@
 #' @references This sequence in the On-Line Encyclopedia of Integer Sequences:
 #'   \href{https://oeis.org/A117966}{A117966}.
 #'
-#'   The Numberphile video featuring Neil Sloane and Brady Haran.
+#'   The Numberphile video featuring Neil Sloane and Brady Haran:
 #'   \href{https://www.youtube.com/watch?v=o8c4uYnnNnc}{Amazing Graphs II
 #'   (including Star Wars)}.
 #'
