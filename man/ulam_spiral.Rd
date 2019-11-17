@@ -2,7 +2,7 @@
 % Please edit documentation in R/ulam_spiral.R
 \name{ulam_spiral}
 \alias{ulam_spiral}
-\title{Forest Fire}
+\title{Ulam Spiral}
 \usage{
 ulam_spiral(sidelength)
 }

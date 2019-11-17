@@ -1,4 +1,4 @@
-#' Forest Fire
+#' Ulam Spiral
 #'
 #' Write the numbers from 1 to n in a square spiral and mark all primes.
 #'
