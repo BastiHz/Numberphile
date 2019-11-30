@@ -15,7 +15,8 @@
 #'
 #' @examples
 #' ff <- forest_fire(5000)
-#' plot(ff, pch = 16, col = "#00000070")
+#' fire_colors <- sample(heat.colors(10), length(ff), replace = TRUE)
+#' plot(ff, pch = 16, col = adjustcolor(fire_colors, alpha.f = 1/3))
 #'
 #' @export
 forest_fire <- function(n) {
