@@ -26,12 +26,11 @@ forest_fire <- function(n) {
     ff <- integer(n)
     ff[1:2] <- 1L
     for (k in seq(2, n-1)) {
-        i <- seq(k, k/2+1, -1)
-        j <- seq(k-1, 1, -2)
-        forbidden <- ff[i] + ff[i] - ff[j]
-        forbidden <- forbidden[forbidden > 0]
-        control <- seq_along(forbidden)
-        ff[k+1] <- match(TRUE, c(!control %in% forbidden, TRUE))
+        a <- ff[seq(k, k/2+1, -1)]
+        b <- ff[seq(k-1, 1, -2)]
+        forbidden <- a + a - b
+        control <- seq_len(max(forbidden))
+        ff[k+1] <- match(FALSE, c(control %in% forbidden, FALSE))
     }
     ff
 }
