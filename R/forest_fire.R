@@ -20,21 +20,17 @@
 #' @export
 forest_fire <- function(n) {
     stopifnot(n > 0)
-    if (n == 1) return(1)
-    if (n == 2) return(c(1, 1))
-    ff <- c(1, 1)
+    if (n == 1) return(1L)
+    if (n == 2) return(c(1L, 1L))
+    ff <- integer(n)
+    ff[1:2] <- 1L
     for (k in seq(2, n-1)) {
         i <- seq(k, k/2+1, -1)
         j <- seq(k-1, 1, -2)
-        forbidden <- unique(sort(ff[i] + ff[i] - ff[j]))
+        forbidden <- ff[i] + ff[i] - ff[j]
         forbidden <- forbidden[forbidden > 0]
         control <- seq_along(forbidden)
-        different <- which(forbidden != control)
-        if (length(different) > 0) {
-            ff <- c(ff, min(different))
-        } else {
-            ff <- c(ff, max(forbidden) + 1)
-        }
+        ff[k+1] <- match(TRUE, c(!control %in% forbidden, TRUE))
     }
     ff
 }
