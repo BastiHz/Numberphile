@@ -4,10 +4,10 @@
 \name{numberphile-package}
 \alias{numberphile}
 \alias{numberphile-package}
-\title{numberphile: A Package Inspired by Numberphile Videos}
+\title{numberphile: Inspired by Numberphile Videos}
 \description{
-Functions to create some neat sequences and
-    diagrams seen in Numberphile videos on youtube.
+Create some neat sequences and diagrams seen in videos on the 
+    Numberphile youtube channel.
 }
 \author{
 \strong{Maintainer}: Sebastian Henz \email{bastihz.dev@posteo.de}

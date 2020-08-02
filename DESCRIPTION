@@ -1,13 +1,13 @@
 Package: numberphile
-Title: A Package Inspired by Numberphile Videos
+Title: Inspired by Numberphile Videos
 Version: 1.0.2
 Authors@R: 
     person(given = "Sebastian",
            family = "Henz",
            role = c("aut", "cre"),
            email = "bastihz.dev@posteo.de")
-Description: Functions to create some neat sequences and
-    diagrams seen in Numberphile videos on youtube.
+Description: Create some neat sequences and diagrams seen in videos on the 
+    Numberphile youtube channel.
 License: MIT + file LICENSE
 Imports: 
     utils
