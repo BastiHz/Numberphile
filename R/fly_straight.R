@@ -12,7 +12,7 @@
 #'   \href{https://oeis.org/A133058}{A133058}.
 #'
 #'   The Numberphile video featuring Neil Sloane and Brady Haran:
-#'   \href{https://www.youtube.com/watch?v=pAMgUB51XZA}{Amazing Graphs}.
+#'   \href{https://youtu.be/pAMgUB51XZA}{Amazing Graphs}.
 #'
 #' @export
 fly_straight <- function(n) {
