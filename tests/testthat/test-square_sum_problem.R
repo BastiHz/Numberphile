@@ -1,6 +1,3 @@
-context("square_sum_problem")
-
-
 test_that("square_sum_problem works", {
     chain <- square_sum_problem(15)
     squares <- seq_len(floor(sqrt(max(chain) + max(chain) - 1)))[-1] ^ 2

@@ -1,6 +1,3 @@
-context("lucky_number_sieve")
-
-
 test_that("the sequence generates correctly", {
     lucky <- lucky_number_sieve(303)
     lucky <- c(head(lucky, 3), tail(lucky, 3))

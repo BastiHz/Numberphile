@@ -1,6 +1,3 @@
-context("prime_parallelograms")
-
-
 test_that("the sequence generates correctly", {
     pp <- prime_parallelograms(10000, plot = FALSE)
     pp <- rbind(head(pp, 3), tail(pp, 3))

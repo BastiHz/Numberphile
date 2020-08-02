@@ -1,6 +1,3 @@
-context("balanced_ternary")
-
-
 test_that("the sequence generates correctly", {
     bt <- balanced_ternary(200)
     bt <- rbind(head(bt, 3), tail(bt, 3))

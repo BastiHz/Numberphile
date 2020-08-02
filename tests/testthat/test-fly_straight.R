@@ -1,6 +1,3 @@
-context("fly_streight")
-
-
 test_that("the sequence generates correctly", {
     # comparing it with the sequence from oeis
     fs <- fly_straight(68)

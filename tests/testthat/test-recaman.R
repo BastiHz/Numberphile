@@ -1,6 +1,3 @@
-context("recaman")
-
-
 test_that("the sequence generates correctly", {
     # comparing it with the sequence from oeis
     r <- recaman(71)
